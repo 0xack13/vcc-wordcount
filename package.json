@@ -14,12 +14,15 @@
         "onCommand:extension.sayHello"
     ],
     "main": "./out/src/extension",
-    "contributes": {
+    /*"contributes": {
         "commands": [{
             "command": "extension.sayHello",
             "title": "Hello World"
         }]
-    },
+    },*/
+    "activationEvents": [
+        "onLanguage:markdown"
+    ],
     "scripts": {
         "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
         "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
